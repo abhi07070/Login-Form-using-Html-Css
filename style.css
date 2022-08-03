@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Gentium+Plus&family=Joan&family=Montserrat:wght@400;600&family=PT+Serif&family=Source+Serif+Pro:wght@200&display=swap');
+
+html {
+    font-size: 62.5%;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background: #2691d9;
+    font-family: 'Montserrat',sans-serif;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 350px;
+    max-width: 400%;
+    background: #fff;
+    border-radius: 5rem;
+}
+.center h1{
+    text-align: center;
+    padding: 0 0 2rem 0;
+    border-bottom: 0.1rem solid silver;
+}
+.center form{
+    padding: 0 4rem;
+    box-sizing: border-box;
+}
+
+form .txt_field{
+    position: relative;
+    border-bottom: 0.1rem solid #adadad;
+    margin: 3rem 0;
+}
+.txt_field input{
+    width: 100%;
+    padding-left: 1rem;
+    font-size: 1.5rem;
+    height: 4rem;
+    border: none;
+    background: none;
+    outline: none;
+}
+.txt_field label{
+    position: absolute;
+    top: 50%;
+    left: 1rem;
+    color: #000;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+    pointer-events: none;
+}
+.txt_field span::before{
+    content: "";
+    position: absolute;
+    top: 4rem;
+    left: 0;
+    width: 0rem;
+    height: 0.2rem;
+    background: #2691d9;
+    transition: .5s;
+}
+.txt_field input:focus~label,
+.txt_field input:valid~label{
+    top: -0.5rem;
+    color: #2691d9;
+}
+.txt_field input:focus~span::before,
+.txt_field input:valid~span::before{
+    width: 100%;
+}
+.pass{
+    margin: -1rem 0 2rem 1rem;
+    color: #a6a6a6;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+.pass:hover{
+    text-decoration: underline;
+}
+input[type="Submit"]{
+    width: 100%;
+    height: 5rem;
+    border: 0.1rem solid;
+    border-radius: 2.5rem;
+    font-size: 1.8rem;
+    font-weight: 700;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}
+input[type="Submit"]:hover{
+    background: #2691d9;
+    color: #e9f4fb;
+    transition: .5s;
+}
+.signup_link{
+    margin: 3rem 0;
+    text-align: center;
+    font-size: 1.4rem;
+    color: #666666;
+}
+.signup_link a{
+    color: #2691d9;
+    text-decoration: none;
+}
+.signup_link a:hover{
+    text-decoration: underline;
+}
+@media (max-width:400px) {
+    html{
+        font-size: 50.5%;
+    }
+    .center{
+        width: 90%;
+    }
+}
